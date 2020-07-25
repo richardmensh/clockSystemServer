@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json({ extended: false}));
 connectDB();
 app.use('/', require('./api/companyApi'));
-const Port = process.env.Port || 8080;
+const Port = process.env.PORT || 8080;
 
 app.listen(Port, () => {
     console.log('Express server listening on port', Port)
