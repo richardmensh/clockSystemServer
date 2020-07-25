@@ -9,5 +9,6 @@ app.use('/', require('./api/companyApi'));
 const Port = process.env.Port || 3000;
 
 app.listen(Port, () => {
+    console.log('Express server listening on port', Port)
     console.log("app is running " + Port);
 });
