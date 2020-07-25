@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const event = new mongoose.Schema({
     companyId: {
-        type: Number
+        type: String
     },
     clockIn: {
         type: String
