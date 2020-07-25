@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json({ extended: false}));
 connectDB();
-app.use('/api/company', require('./api/companyApi'));
+app.use('/', require('./api/companyApi'));
 const Port = process.env.Port || 3000;
 
 app.listen(Port, () => {
