@@ -11,6 +11,7 @@ route.post('/', async (req, res) => {
             functions: functions
         });
         await company.save();
+
         res.json(company);
     } catch (err) {
         res.json({ message: err});

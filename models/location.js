@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// location
+
 const location = new mongoose.Schema({
     latitude: {
         type: String,
