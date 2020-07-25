@@ -7,15 +7,11 @@ const company = new mongoose.Schema({
     functions: {
         type: [String]
     },
-    location: {
-        latitude: {
-            type: String,
-            default: "52.332391"
-        }, 
-        longtitude: {
-            type: String,
-            default: "4.921986"
-        }
+    latitude: {
+        type: String
+    }, 
+    longtitude: {
+        type: String,
     },
     image: {
         type: String,

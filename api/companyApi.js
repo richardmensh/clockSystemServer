@@ -8,7 +8,9 @@ route.post('/', async (req, res) => {
         const { name, functions, latitude, longtitude } = req.body;
         let company = new Company({
             name: name,
-            functions: functions
+            functions: functions,
+            latitude: latitude,
+            longtitude: longtitude
         });
         await company.save();
 
