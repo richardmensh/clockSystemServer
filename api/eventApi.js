@@ -5,11 +5,13 @@ const route = express.Router();
 
 route.post('/', async (req, res) => {
     try {
-        const {companyId, clockIn, clockOut } = req.body;
+        const {companyId, clockIn, clockOut, description, scale } = req.body;
         let event = new Event({
             companyId: companyId,
             clockIn: clockIn,
-            clockOut: clockOut
+            clockOut: clockOut,
+            description: description,
+            scale: scale
         });
         await event.save();
         res.json(event);

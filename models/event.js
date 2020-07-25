@@ -17,6 +17,10 @@ const event = new mongoose.Schema({
     description: {
         type: String,
         default: ""
+    },
+    eventDate: {
+        type: Date,
+        default: Date.now
     }
 });
 
