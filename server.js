@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const connectDB = require('./db/connection')
+const connectDB = require('./db/connection');
 const app = express();
 
 app.use(express.json({ extended: false}));
