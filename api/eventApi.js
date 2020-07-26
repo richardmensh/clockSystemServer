@@ -2,16 +2,18 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Event = require('../models/event');
 const route = express.Router();
-
+const moment = require('moment-timezone'); 
 route.post('/', async (req, res) => {
     try {
+       let datum = Math.round(new Date().getTime()/1000)
+        console.log(datum);
         const {companyId, clockIn, clockOut, description, scale } = req.body;
         let event = new Event({
             companyId: companyId,
             clockIn: clockIn,
             clockOut: clockOut,
             description: description,
-            scale: scale
+            scale: scale,
         });
         await event.save();
         res.json(event);

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const moment = require('moment-timezone'); 
 
 const event = new mongoose.Schema({
     companyId: {
@@ -20,7 +21,7 @@ const event = new mongoose.Schema({
     },
     eventDate: {
         type: String,
-        default: Date.now.toString
+        default: Math.round(new Date().getTime()/1000)
     }
 });
 
