@@ -20,8 +20,7 @@ const event = new mongoose.Schema({
         default: ""
     },
     eventDate: {
-        type: String,
-        default: Math.round(new Date().getTime()/1000)
+        type: String
     }
 });
 

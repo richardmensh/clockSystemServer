@@ -5,15 +5,14 @@ const route = express.Router();
 const moment = require('moment-timezone'); 
 route.post('/', async (req, res) => {
     try {
-       let datum = Math.round(new Date().getTime()/1000)
-        console.log(datum);
-        const {companyId, clockIn, clockOut, description, scale } = req.body;
+        const {companyId, clockIn, clockOut, description, scale, eventDate } = req.body;
         let event = new Event({
             companyId: companyId,
             clockIn: clockIn,
             clockOut: clockOut,
             description: description,
             scale: scale,
+            eventDate: eventDate
         });
         await event.save();
         res.json(event);
