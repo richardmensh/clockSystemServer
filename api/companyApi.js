@@ -32,4 +32,17 @@ route.get('/', async (req, res) => {
     }
 });
 
+// get by id
+route.get('/id', async (req, res) => {
+    try {
+        var id = req.body.id;
+        const company = await Company.findById(id);
+        res.json(company);
+    } catch (err) {
+        res.json({ message: err});
+        console.log(err);
+    }
+});
+
+
 module.exports = route;
