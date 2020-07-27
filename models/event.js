@@ -20,8 +20,12 @@ const event = new mongoose.Schema({
         default: ""
     },
     eventDate: {
+        type: Date
+    },
+    role: {
         type: String
     }
+
 });
 
 module.exports = Event = mongoose.model('event', event);
