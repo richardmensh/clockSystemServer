@@ -20,7 +20,7 @@ const event = new mongoose.Schema({
         default: ""
     },
     eventDate: {
-        type: Date
+        type: String
     },
     role: {
         type: String
