@@ -10,12 +10,6 @@ const company = new mongoose.Schema({
     address: { 
         type: String
     },
-    latitude: {
-        type: String
-    }, 
-    longtitude: {
-        type: String,
-    },
     image: {
         type: String,
         default: null
