@@ -5,12 +5,13 @@ const route = express.Router();
 
 route.post('/', async (req, res) => {
     try {
-        const { name, functions, latitude, longtitude } = req.body;
+        const { name, functions, address, latitude, longtitude } = req.body;
         let company = new Company({
             name: name,
             functions: functions,
             latitude: latitude,
-            longtitude: longtitude
+            longtitude: longtitude,
+            address: address
         });
         await company.save();
 

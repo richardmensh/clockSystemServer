@@ -7,6 +7,9 @@ const company = new mongoose.Schema({
     functions: {
         type: [String]
     },
+    address: { 
+        type: String
+    },
     latitude: {
         type: String
     }, 

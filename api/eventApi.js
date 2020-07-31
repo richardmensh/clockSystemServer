@@ -33,4 +33,15 @@ route.get('/', async (req, res) => {
     }
 });
 
+// get by id
+route.get('/:id', async (req, res) => {
+    try {
+        const event = await Event.findOne({ _id: req.params.id })
+        res.json(event);
+    } catch (err) {
+        res.json({ message: err});
+        console.log(err);
+    }
+});
+
 module.exports = route;
