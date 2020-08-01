@@ -45,7 +45,7 @@ route.get('/:id', async (req, res) => {
 // delete company
 route.delete('/', async (req, res) => {
     try {
-        Company.findOneAndDelete(req.params.id, req.body, function(err, post) {
+        Company.findOneAndRemove(req.params.id, req.body, function(err, post) {
             if (err) return next(err);
             res.json(post);
         });
